@@ -1,0 +1,15 @@
+custom-name: Dune II - CD DOS - dunelegacy
+files:
+- dlegacy: https://github.com/legluondunet/MyLittleLutrisScripts/raw/master/Dune%20II/dunelegacy_x64.tar.xz
+game:
+  exe: dunelegacy
+installer:
+- insert-disc:
+    description: Please insert disc Dune II
+    requires: virgin/dune2/dune2.exe
+- merge:
+    dst: $GAMEDIR/data
+    src: $DISC/virgin/dune2/
+- extract:
+    dst: $GAMEDIR
+    file: dlegacy
